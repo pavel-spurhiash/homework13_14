@@ -14,11 +14,14 @@ import com.gmail.pashasimonpure.service.SumService;
 @Service
 public class FileServiceImpl implements FileService {
 
-    @Autowired
     FileRepository fileRepository;
+    SumService sumService;
 
     @Autowired
-    SumService sumService;
+    public FileServiceImpl(FileRepository fileRepository, SumService sumService){
+        this.fileRepository = fileRepository;
+        this.sumService = sumService;
+    }
 
     private final Logger logger = LogManager.getLogger(MethodHandles.lookup().lookupClass());
 

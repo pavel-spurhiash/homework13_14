@@ -16,6 +16,9 @@ public class SumServiceImpl implements SumService {
 
     private static final String REGEX_LINE_FILTER = "^\\D*[0-9]+\\D*[0-9]*\\D*$";
 
+    public SumServiceImpl(){
+    }
+
     @Override
     public int add(String numbers) {
         int sum = 0;

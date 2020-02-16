@@ -19,6 +19,9 @@ public class FileRepositoryImpl implements FileRepository {
 
     private final Logger logger = LogManager.getLogger(MethodHandles.lookup().lookupClass());
 
+    public FileRepositoryImpl(){
+    }
+
     @Override
     public List<String> readLines(String filename) {
         logger.debug("trying read " + filename + " ...");
